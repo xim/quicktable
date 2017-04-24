@@ -3,17 +3,17 @@
 	lang: 'af,ar,bg,bn,bs,ca,cs,cy,da,de,el,en,en-au,en-ca,en-gb,eo,es,et,eu,fa,fi,fo,fr,fr-ca,gl,gu,he,hi,hr,hu,id,is,it,ja,ka,km,ko,ku,lt,lv,mk,mn,ms,nb,nl,no,pl,pt,pt-br,ro,ru,si,sk,sl,sq,sr,sr-latn,sv,th,tr,ug,uk,vi,zh,zh-cn', // %REMOVE_LINE_CORE%
 	afterInit: function( editor ) {
 		var conf = editor.config,
-			quickRows = conf.qtRows || 8,
-			quickColumns = conf.qtColumns || 10,
-			quickBorder = conf.qtBorder || '1',
-			quickStyle = conf.qtStyle || null,
-			quickClass = conf.qtClass || '',
-			quickCellPadding = conf.qtCellPadding || '1',
-			quickCellSpacing = conf.qtCellSpacing || '1',
-			quickWidth = conf.qtWidth || '500px',
-			quickPreviewSize = conf.qtPreviewSize || '14px',
-			quickPreviewBorder = conf.qtPreviewBorder || '1px solid #aaa',
-			quickPreviewBackground = conf.qtPreviewBackground || '#e5e5e5';
+			quickRows = (conf.qtRows === undefined ? 8 : conf.qtRows),
+			quickColumns = (conf.qtColumns === undefined ? 10 : conf.qtColumns),
+			quickBorder = (conf.qtBorder === undefined ? '1' : conf.qtBorder),
+			quickStyle = (conf.qtStyle === undefined ? null : conf.qtStyle),
+			quickClass = (conf.qtClass === undefined ? '' : conf.qtClass),
+			quickCellPadding = (conf.qtCellPadding === undefined ? '1' : conf.qtCellPadding),
+			quickCellSpacing = (conf.qtCellSpacing === undefined ? '1' : conf.qtCellSpacing),
+			quickWidth = (conf.qtWidth === undefined ? '500px' : conf.qtWidth),
+			quickPreviewSize = (conf.qtPreviewSize === undefined ? '14px' : conf.qtPreviewSize),
+			quickPreviewBorder = (conf.qtPreviewBorder === undefined ? '1px solid #aaa' : conf.qtPreviewBorder),
+			quickPreviewBackground = (conf.qtPreviewBackground === undefined ? '#e5e5e5' : conf.qtPreviewBackground);
 			
 		function makeElement( name ) {
 			return new CKEDITOR.dom.element( name, editor.document );
